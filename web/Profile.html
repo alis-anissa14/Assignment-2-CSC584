@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title> Student Form</title>
+  <style>
+       *{ margin:0; padding:0; box-sizing: border-box; }
+
+      body { 
+          font-family: Times New Roman, serif; 
+          min-height: 100vh;
+          padding: 20px; 
+          background-image: url("images/student.jpg");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+
+      }
+
+      .container { 
+          width: 100%;
+          max-width: 410px; 
+          margin: 40px auto;
+          background: rgba(255,255,255,0.9);
+          padding: 25px;
+          border-radius: 10px;
+          box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      }
+
+      h2 {
+          text-align: center;
+          color: #302b2b;
+          margin-bottom: 20px;
+      }
+
+      input, textarea, select {
+          width: 100%;
+          resize: vertical; 
+          max-width: 100%;
+          padding: 10px;
+          margin-top: 8px ;
+          margin-bottom: 15px;
+          border-radius: 10px;
+          border: 1px solid #bbb;
+          font-size: 14px;
+          box-sizing: border-box;
+         
+      }
+
+      button {
+          width: 100%;
+          padding: 12px;
+          background-color: #4b79ff;
+          color: #fff;
+          font-size: 16px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+
+      button:hover {
+          background-color: #3a61d0;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Profile</h2>
+    <form action="ProfileServlet" method="POST">
+      Name:<br>
+      <input type="text" name="name" required>
+
+      Student ID:<br>
+      <input type="text" name="studentId" required>
+
+      Program:<br>
+      <select name="program" required>
+        <option value="">--Choose Program--</option>
+        <option value="Bachelor of Computer Science(Hons)">Bachelor of Computer Science(Hons)</option>
+        <option value="Bachelor Of Information Technology(Hons.)">Bachelor Of Information Technology(Hons.)</option>
+        <option value="Bachelor of Information Technology (Hons.) Business Computing">Bachelor of Information Technology (Hons.) Business Computing</option>
+        <option value="Bachelor of Computer Science(Hons) Computer Networks">Bachelor of Computer Science(Hons) Computer Networks</option>
+      </select>
+
+      Email:<br>
+      <input type="email" name="email" required>
+
+      Hobbies:<br>
+      <input type="text" name="hobbies">
+
+      Self Introduction:<br>
+      <textarea name="intro" rows="5"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
